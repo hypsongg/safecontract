@@ -1,0 +1,153 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #f0f2f5;
+}
+
+form {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 400px;
+}
+
+button {
+    background: #4CAF50;
+    color: white;
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+/* O resultado começa oculto */
+.hidden {
+    display: none;
+}
+
+/* Estilização do resultado */
+#result-container {
+    background-color: #f8f8f8;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Formatação do JSON de resposta */
+pre {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+/* Responsividade para celular */
+@media (max-width: 600px) {
+    #result-container {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+/* Ajuste no container de resultado */
+#result-container {
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+/* Formatação do conteúdo JSON */
+#result {
+    white-space: pre-wrap; /* Mantém a formatação */
+    word-wrap: break-word; /* Evita overflow */
+    background-color: #f8f8f8;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* Responsividade para celular */
+@media (max-width: 600px) {
+    #result-container {
+        font-size: 14px;
+        padding: 10px;
+        max-width: 100%;
+    }
+}
+/* Container da Análise */
+.analysis-container {
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* Seções com títulos */
+.analysis-section {
+    margin-bottom: 15px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+
+/* Itens individuais */
+.analysis-item {
+    margin: 5px 0;
+    font-weight: normal;
+}
+
+/* Ajustando a exibição das respostas */
+.analysis-item strong {
+    display: block;
+    font-size: 15px;
+    color: #333;
+    margin-bottom: 2px;
+}
+
+.analysis-item br {
+    display: block;
+    content: "";
+    margin-bottom: 5px;
+}
+/* Barra de Carregamento */
+#loadingIndicator {
+    display: none;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(to right, #4CAF50, #76c7c0);
+    animation: loadingAnimation 1.5s infinite linear;
+    margin-top: 10px;
+    border-radius: 3px;
+}
+
+@keyframes loadingAnimation {
+    0% {
+        width: 0%;
+    }
+    50% {
+        width: 50%;
+    }
+    100% {
+        width: 100%;
+    }
+}
